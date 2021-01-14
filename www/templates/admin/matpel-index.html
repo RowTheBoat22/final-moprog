@@ -1,0 +1,20 @@
+<ion-view cache-view="false" view-title="Matakuliah" hide-nav-bar="true">
+
+    <ion-header-bar align-title="center">
+        <button class="button button-icon ion-navicon" menu-toggle="left"></button>
+        <h1 class="title">Mata Pelajaran</h1>
+        <a href="#/menu/matpel-create" class="button icon ion-android-add" nav-direction="forward">Add</a>
+    </ion-header-bar>
+    <ion-content>
+        <label class="item item-input">
+            <input type="text" placeholder="Search ..." ng-model="searchFilter">
+        </label>
+        <ion-list ng-controller="MatpelCtrl" nav-direction="forward">
+            <ion-item class="item item-icon-left item-icon-right" ng-repeat="x in showMatpel | filter:searchFilter" href="#/menu/matpel-update/{{x.id_matpel}}">
+                <i class="icon ion-ios-book-outline"></i>
+                {{x.id_matpel}} | {{x.namamatpel}}
+                <a class="button button-icon icon ion-ios-trash" ng-click="delMatpel({{x.id_matpel}})"></a>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

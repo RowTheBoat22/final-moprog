@@ -1,0 +1,69 @@
+<ion-view cache-view="false" view-title="Nilai" hide-nav-bar="true">
+    <ion-header-bar align-title="center">
+        <button class="button button-icon ion-navicon" menu-toggle="left"></button>
+        <h1 class="title">Nilai</h1>
+    </ion-header-bar>
+    
+    <ion-content>
+        <ion-list ng-controller="UserSiswaCtrl">
+            <div class="item item-divider">
+                <b>Kelompok A (Umum)</b>
+            </div>
+            <ion-item class="item item-icon-left" ng-repeat="x in NilaiDataA">
+                <i class="icon ion-ios-book-outline"></i>
+                <div class="row"><b>{{x.namamatpel}}</b></div>
+                <div class="row">
+                    <div class="col-50">Pengetahuan :</div>
+                    <div class="col-25">{{x.pengetahuan}}</div>
+                    <div class="col-25">{{x.pengetahuan_grade}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-50">Keterampilan :</div>
+                    <div class="col-25">{{x.keterampilan}}</div>
+                    <div class="col-25">{{x.keterampilan_grade}}</div>
+                </div>
+            </ion-item>
+        </ion-list>
+
+        <ion-list ng-controller="UserSiswaCtrl">
+            <div class="item item-divider">
+                <b>Kelompok B (Umum)</b>
+            </div>
+            <ion-item class="item item-icon-left" ng-repeat="x in NilaiDataB">
+                <i class="icon ion-ios-book-outline"></i>
+                <div class="row"><b>{{x.namamatpel}}</b></div>
+                <div class="row">
+                    <div class="col-50">Pengetahuan :</div>
+                    <div class="col-25">{{x.pengetahuan}}</div>
+                    <div class="col-25">{{x.pengetahuan_grade}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-50">Keterampilan :</div>
+                    <div class="col-25">{{x.keterampilan}}</div>
+                    <div class="col-25">{{x.keterampilan_grade}}</div>
+                </div>
+            </ion-item>
+        </ion-list>
+
+        <ion-list ng-controller="UserSiswaCtrl">
+            <div class="item item-divider">
+                <b>Kelompok C (Peminatan)</b>
+            </div>
+            <ion-item class="item item-icon-left" ng-repeat="x in NilaiDataC">
+                <i class="icon ion-ios-book-outline"></i>
+                <div class="row"><b>{{x.namamatpel}}</b></div>
+                <div class="row">
+                    <div class="col-50">Pengetahuan :</div>
+                    <div class="col-25">{{x.pengetahuan}}</div>
+                    <div class="col-25">{{x.pengetahuan_grade}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-50">Keterampilan :</div>
+                    <div class="col-25">{{x.keterampilan}}</div>
+                    <div class="col-25">{{x.keterampilan_grade}}</div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+
+</ion-view>

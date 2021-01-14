@@ -1,0 +1,22 @@
+<ion-view cache-view="false" hide-nav-bar="true">
+
+    <ion-header-bar align-title="center">
+        <a href="#/menu/nilai-siswa" class="button icon ion-ios-arrow-back" nav-direction="back"></a>
+        <h1 class="title">Nilai - List MatPel</h1>
+        <a href="#/menu/nilai-create/{{curUserId}}" class="button icon ion-android-add" nav-direction="forward"> Nilai</a>
+    </ion-header-bar>
+
+    <ion-content>
+        <label class="item item-input">
+            <input type="text" placeholder="Search ..." ng-model="searchFilter">
+        </label>
+        <ion-list ng-controller="NilaiCtrl" nav-direction="forward">
+            <ion-item class="item item-icon-left item-icon-right" ng-repeat="x in showNilaiMatpel | filter:searchFilter" href="#/menu/nilai-update/{{x.username}}/{{x.id_matpel}}">
+                <i class="icon ion-ios-book-outline"></i>
+                {{x.id_matpel}} | {{x.namamatpel}}
+                <a class="button button-icon icon ion-ios-trash" ng-click="deleteNilai(x.username, x.id_matpel)"></a>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+
+</ion-view>

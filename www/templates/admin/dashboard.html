@@ -1,0 +1,31 @@
+<ion-view cache-view="false" view-title="Dashboard">
+    <ion-header-bar class="bar-stable">
+        <h1 class="title"></h1>
+    </ion-header-bar>
+    <ion-content ng-controller="AdminMainCtrl">
+        <p class="padding ft-sz-20">Welcome <b>{{name}}</b></p>
+        
+        <div class="row" >
+            <div class="col col-50">
+                <div class="card al-center">
+                    <div class="item item-divider">
+                      Siswa
+                    </div>
+                    <div class="item item-text-wrap ft-sz-huge">
+                      {{data.total_siswa}}
+                    </div>
+                  </div>
+            </div>
+            <div class="col col-50">
+                <div class="card al-center">
+                    <div class="item item-divider">
+                      Mata Pelajaran
+                    </div>
+                    <div class="item item-text-wrap ft-sz-huge">
+                      {{data.total_matpel}}
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,164 @@
+/* 
+    Define one rem
+
+    62.5% * 16px = 10px
+
+    Color
+    primary: rgba(33,0,82,1)
+    secondary: rgba(57,0,145,1)
+    tertiary: rgba(80,0,205,1)
+*/
+
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+p {
+    margin: 2rem 0;
+}
+
+li {
+    padding: .4rem 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.scroll {
+    position: relative;
+}
+
+/* BAR */
+.bar-primary {
+    background-color: rgba(33,0,82,1);
+    color: white;
+}
+
+/* Front-html */
+.header-main {
+    height: 10vh;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color:rgba(33,0,82,1);
+    clip-path: ellipse(60% 100% at 50% 0%);
+}
+
+@media (min-width: 600px) {
+    .header-main {
+        height: 15vh;
+    }
+}
+
+.menus-name {
+    font-size: 1.8rem;
+    display: inline-block !important;
+    color: rgb(29, 0, 71);
+}
+
+.title-main {
+    font-size: 2.5rem;
+    font-weight: 600;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: white;
+}
+
+.main-menu {
+    padding-top: 15vh;
+}
+
+@media (min-width: 600px) {
+    .main-menu {
+        padding-top: 25vh;
+    }
+}
+
+.row {
+    margin-bottom: 22px;
+}
+
+.menus {
+    transform: translate(30%, -0%);
+    text-align: center;
+    background-color: white;
+    width: 65%;
+
+    border-radius: 3px;
+    box-shadow: 0px 1px 10px 2px rgba(80,0,205,.3);
+}
+
+.menus-icon {
+    background-color: rgba(57,0,145,1);
+    width: 90%;
+    
+    transform: translate(5%, -12%);
+    padding-bottom: 4px;
+
+    border-radius: 5%;
+}
+
+i[class^="ion-"] {
+    font-size: 9rem;
+    color: white;
+}
+
+/* Location HTMl */
+#map {
+    width: 100%;
+    height: 70%;
+}
+
+/* BERITA HTML */
+.item-primary {
+    background: rgb(33,0,82);
+    background: linear-gradient(147deg, rgba(33,0,82,1) 0%, rgba(57,0,145,1) 40%, rgba(80,0,205,1) 100%);
+    color: white;
+}
+
+.card-custom{
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px 2px rgba(22, 3, 53, 0.3);
+}
+
+.al-right {
+    text-align: right;
+}
+
+.al-center {
+    text-align: center;
+}
+
+.f-w-500 {
+    font-weight: 500 !important;
+}
+
+.ft-sz-20 {font-size: 20px;}
+
+.t-white {
+    color: white;
+}
+
+i.icon-small {
+    position: relative;
+    top: 2px;
+    font-size: 1.5rem;
+    margin-right: 8px;
+}

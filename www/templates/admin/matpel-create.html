@@ -1,0 +1,35 @@
+<ion-view cache-view="false" hide-nav-bar="true">
+    
+    <ion-header-bar align-title="center">
+        <a href="#/menu/matpel" class="button icon ion-ios-arrow-back" nav-direction="back"></a>
+        <h1 class="title">Add Mata Pelajaran</h1>
+    </ion-header-bar>
+
+    <ion-content>
+        <form ng-submit="createMatpel()">
+            <div class="list">
+                <label class="item item-input">
+                    <span class="input-label">ID MatPel</span>
+                    <input type="text" value="" ng-model="MatpelsData.matpel_id_matpel">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Nama Matpel</span>
+                    <input type="text" value="" ng-model="MatpelsData.matpel_namamatpel">
+                </label>
+                <label class="item item-input item-select">
+                    <span class="input-label">Kelompok</span>
+                    <select ng-model="MatpelsData.matpel_kelompok">
+                        <option disabled selected>Pilih</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                    </select>
+                </label>
+                <label class="item">
+                    <button class="button button-block button-positive">Simpan</button>
+                </label>
+            </div>
+        </form>
+    </ion-content>
+
+</ion-view>

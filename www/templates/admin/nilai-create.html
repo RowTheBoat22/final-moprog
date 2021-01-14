@@ -1,0 +1,37 @@
+<ion-view cache-view="false" hide-nav-bar="true">
+
+    <ion-header-bar align-title="center">
+        <a href="#/menu/nilai-matpel/{{curUserId}}" class="button icon ion-ios-arrow-back" nav-direction="back"></a>
+        <h1 class="title">Add Nilai</h1>
+    </ion-header-bar>
+
+    <ion-content>
+        <form ng-submit="createNilai()">
+            <div class="list">
+                <label class="item item-input">
+                    <span class="input-label">ID User</span>
+                    <input type="text" value="{{user.UID}}" ng-model="user.UID" disabled>
+                </label>
+                <label class="item item-input item-select">
+                    <span class="input-label">MatPel</span>
+                    <select ng-model="nilaisData.id_matpel" ng-controller="MatpelCtrl">
+                        <option selected disabled>Pilih</option>
+                        <option ng-repeat="x in showMatpel" value="{{x.id_matpel}}">{{x.id_matpel}} | {{x.namamatpel}}</option>
+                    </select>
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Nilai Pengetahuan</span>
+                    <input type="text" value="" ng-model="nilaisData.pengetahuan">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Nilai Keterampilan</span>
+                    <input type="text" value="" ng-model="nilaisData.keterampilan">
+                </label>
+                <label class="item">
+                    <button class="button button-block button-positive">Simpan</button>
+                </label>
+            </div>
+        </form>
+    </ion-content>
+
+</ion-view>

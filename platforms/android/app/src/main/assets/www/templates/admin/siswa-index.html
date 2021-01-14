@@ -1,0 +1,24 @@
+<ion-view cache-view="false" view-title="Mahasiswa" hide-nav-bar="true">
+    <!-- <ion-nav-buttons side="right">
+        <a href="#/menu/mahasiswa-create" class="button icon ion-person-add" nav-direction="forward">
+        </a>
+      </ion-nav-buttons> -->
+
+    <ion-header-bar align-title="center">
+        <button class="button button-icon ion-navicon" menu-toggle="left"></button>
+        <h1 class="title">Siswa</h1>
+        <a href="#/menu/siswa-create" class="button icon ion-person-add" nav-direction="forward"></a>
+    </ion-header-bar>
+    <ion-content>
+        <label class="item item-input">
+            <input type="text" placeholder="Search ..." ng-model="searchFilter">
+        </label>
+        <ion-list ng-controller="SiswaCtrl" nav-direction="forward">
+            <ion-item class="item item-icon-left item-icon-right" ng-repeat="x in showSiswa | filter:searchFilter" href="#/menu/siswa-update/{{x.username}}">
+                <i class="icon ion-person"></i>
+                {{x.nama}}
+                <a class="button button-icon icon ion-ios-trash" ng-click="delSiswa({{x.username}})"></a>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

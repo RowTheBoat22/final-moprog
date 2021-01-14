@@ -1,0 +1,36 @@
+<ion-view>
+    <ion-nav-bar class="bar-primary">
+        <ion-nav-buttons side="right">
+            <button class="button-light" ng-click="doAbout()" nav-direction="back">
+                Back
+            </button>
+        </ion-nav-button>
+    </ion-nav-bar>
+    <ion-nav-title class="f-w-500">Berita</ion-nav-title>
+    <ion-content>
+        <!-- <ion-list>
+            <ion-item ng-repeat="p in posts" class="card" href="#/detailnews/{{p.id}}">
+                    <div class="item item-text-wrap item-primary text-white">
+                        <h2 class="t-white berita-pri">{{p.title.rendered}}</h2>
+                        <h4 class="t-white"> <i class="ion-clock icon-small"></i>{{ p.date | date : "dd MMM y"}}</h4>
+                    </div>
+            </ion-item>
+        </ion-list> -->
+        <div ng-repeat="p in posts"">
+            <a href="#/detailberita/{{p.id}}">
+                <div class="card card-custom">
+                    <div class="item item-text-wrap item-primary text-white">
+                        <h2 class="t-white f-w-500">{{p.title.rendered}}</h2>
+                        <h4 class="t-white al-right"> <i class="ion-clock icon-small"></i>{{ p.date | date : "dd MMM y"}}</h4>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- <div class="card">
+            <div class="item item-text-wrap item-primary text-white">
+                <h2 class="t-white berita-pri">Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, fugit.</h2>
+                <h4 class="t-white"> <i class="ion-clock icon-small"></i>clock</h4>
+            </div>
+          </div> -->
+    </ion-content>
+</ion-view>
